@@ -19,11 +19,11 @@
     .hamburger { display:none; flex-direction:column; cursor:pointer; gap:4px; }
     .hamburger div { width:25px; height:3px; background:#111827; transition:0.3s; }
 
-    main { padding:50px 20px; max-width:1000px; margin:auto; }
-    section { margin-bottom:60px; }
+    main { padding:50px 20px; max-width:900px; margin:auto; }
+    section { margin-bottom:50px; }
     section h2 { font-size:2rem; color:#1D4ED8; margin-bottom:20px; }
-    section p { margin-bottom:15px; color:#374151; text-align:justify; }
-    .section-divider { height:2px; background:#e5e7eb; margin:50px 0; }
+    section ul { margin-left:20px; margin-bottom:20px; }
+    section li { margin-bottom:10px; color:#374151; }
 
     footer { text-align:center; padding:20px; background:#f9fafb; color:#6B7280; }
 
@@ -31,13 +31,11 @@
       header { padding:15px 20px; }
       .nav { display:none; flex-direction:column; gap:10px; position:absolute; top:60px; right:20px; background:#ffffff; padding:15px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);}
       .nav.show { display:flex; }
-      .steps, .features { flex-direction:column; }
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <div class="logo">
     <img src="favicon.png" alt="Memorix Logo">
@@ -45,7 +43,7 @@
   </div>
   <nav class="nav">
     <a href="index.html">Home</a>
-    <a href="#">About</a>
+    <a href="about.html">About</a>
     <a href="howitworks.html">How It Works</a>
   </nav>
   <div class="hamburger" onclick="toggleMenu()">
@@ -56,46 +54,48 @@
 </header>
 
 <main>
-  <!-- About Memorix -->
   <section>
     <h2>About Memorix</h2>
-    <p>Memorix is a unique and innovative password generator designed to make your online life easier, safer, and more organized. Unlike traditional password tools that give you random strings of letters, numbers, and symbols that are hard to remember, Memorix focuses on creating passwords that are both secure and memorable. By taking simple personal inputs such as your name, hobbies, favorite numbers, and symbols, Memorix generates several personalized passwords that you can easily recall but remain highly secure.</p>
-    <p>The goal of Memorix is to eliminate the common frustration of forgetting passwords while maintaining strong security standards. Each password generated is unique, providing multiple options to choose from. Users can select a password that fits their preference, copy it instantly, and use it for multiple online accounts without worrying about compromise. With Memorix, remembering a password becomes a simple and stress-free process, blending practicality with security.</p>
-    <p>Whether you are a student, professional, or just someone who frequently accesses multiple online platforms, Memorix provides a simple, reliable, and user-friendly solution. Our focus is on personalization, ease of use, and creating a seamless experience for our users.</p>
+    <ul>
+      <li>[Write about the product: purpose, key features, target audience]</li>
+      <li>[Explain why it’s different from other password generators]</li>
+      <li>[Optional: Security & personalization benefits]</li>
+    </ul>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- About Solvoro -->
   <section>
     <h2>About Solvoro</h2>
-    <p>Solvoro is a pioneering freelancing and digital solutions company dedicated to providing innovative services to clients and businesses worldwide. Founded with the goal of simplifying digital operations, Solvoro has been empowering small and medium enterprises to establish a strong online presence with services like website design, logo creation, social media content, and more.</p>
-    <p>As the parent company of Memorix, Solvoro’s vision extends to creating tools that help users improve their digital security and efficiency. By introducing Memorix under the Solvoro umbrella, we are bridging the gap between creativity, productivity, and online safety. The same principles that Solvoro applies to its client services — professionalism, innovation, and user satisfaction — are reflected in Memorix.</p>
-    <p>With Solvoro, we are constantly exploring ways to provide practical, user-friendly digital tools. Memorix is one such innovation, designed to assist people in a secure and meaningful way. Our commitment is to offer solutions that not only work effectively but also enrich the user experience.</p>
+    <ul>
+      <li>[Write about parent company: services offered, vision]</li>
+      <li>[Explain relation with Memorix]</li>
+      <li>[Highlight trust, innovation, user focus]</li>
+    </ul>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- About Ayam M. Shukla -->
   <section>
     <h2>About the Founder - Ayam M. Shukla</h2>
-    <p>Ayam M. Shukla, a visionary young entrepreneur in class 8th, is the founder and driving force behind both Memorix and Solvoro. Despite his young age, Ayam possesses a unique blend of creativity, technical skill, and determination that has enabled him to build functional digital products that solve real-world problems.</p>
-    <p>Ayam started his journey with a simple idea: to make technology accessible, useful, and secure for everyone. From designing professional-grade websites and logos through Solvoro to creating a secure and memorable password generator through Memorix, Ayam demonstrates exceptional foresight and dedication.</p>
-    <p>His approach combines innovation with practicality. He understands the struggles of everyday users, particularly in managing digital security, and has dedicated his efforts to creating solutions that simplify lives. Through Memorix, Ayam has focused on addressing the critical issue of password management by providing a tool that anyone can use easily, no matter their age or experience level.</p>
-    <p>Ayam believes in learning by doing, experimenting with new ideas, and constantly improving his projects. His leadership reflects a balance of technical knowledge, creative problem-solving, and an unwavering commitment to helping others through technology. Memorix and Solvoro are testaments to his passion for innovation and his goal to make digital life easier, safer, and more enjoyable for everyone.</p>
-    <p>As a young founder, Ayam inspires other students and aspiring entrepreneurs to pursue their ideas without fear. He demonstrates that age is no barrier to creating impactful solutions. Memorix stands as a reflection of his vision — a product built with thought, care, and a desire to solve meaningful problems in the digital world.</p>
+    <ul>
+      <li>[Personal background: class 8th, young entrepreneur]</li>
+      <li>[Journey: starting Memorix & Solvoro]</li>
+      <li>[Vision, values, and future goals]</li>
+      <li>[Message to users / inspiration]</li>
+    </ul>
   </section>
 </main>
 
-<!-- Footer -->
 <footer>
   © 2025 Memorix — Powered by <strong>Solvoro</strong>
 </footer>
 
 <script>
-  function toggleMenu(){
-    document.querySelector('.nav').classList.toggle('show');
-  }
+function toggleMenu(){
+  document.querySelector('.nav').classList.toggle('show');
+}
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav').classList.remove('show');
+  });
+});
 </script>
 
 </body>
